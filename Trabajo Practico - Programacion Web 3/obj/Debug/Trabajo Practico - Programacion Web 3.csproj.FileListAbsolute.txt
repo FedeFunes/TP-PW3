@@ -1,0 +1,5 @@
+C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Trabajo Practico - Programacion Web 3\bin\Trabajo Practico - Programacion Web 3.dll
+C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Trabajo Practico - Programacion Web 3\bin\Trabajo Practico - Programacion Web 3.pdb
+C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Trabajo Practico - Programacion Web 3\obj\Debug\Trabajo Practico - Programacion Web 3.dll
+C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Trabajo Practico - Programacion Web 3\obj\Debug\Trabajo Practico - Programacion Web 3.pdb
+C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Trabajo Practico - Programacion Web 3\obj\Debug\Trabajo Practico - Programacion Web 3.csprojResolveAssemblyReference.cache
