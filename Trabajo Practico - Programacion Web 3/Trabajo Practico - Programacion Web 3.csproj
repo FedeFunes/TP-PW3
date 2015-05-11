@@ -57,43 +57,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AEquipos.aspx" />
     <Content Include="AJugadores.aspx" />
-    <Content Include="ATorneos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Footer.ascx" />
     <Content Include="RContacto.aspx" />
     <Content Include="RListadoEquipos.aspx" />
     <Content Include="Web.config" />
+    <Content Include="ATorneos.aspx" />
+    <Content Include="AEquipos.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administracion.Master.cs">
-      <DependentUpon>Administracion.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Administracion.Master.designer.cs">
-      <DependentUpon>Administracion.Master</DependentUpon>
-    </Compile>
-    <Compile Include="AEquipos.aspx.cs">
-      <DependentUpon>AEquipos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AEquipos.aspx.designer.cs">
-      <DependentUpon>AEquipos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AJugadores.aspx.cs">
       <DependentUpon>AJugadores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AJugadores.aspx.designer.cs">
       <DependentUpon>AJugadores.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ATorneos.aspx.cs">
-      <DependentUpon>ATorneos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ATorneos.aspx.designer.cs">
-      <DependentUpon>ATorneos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -109,13 +88,12 @@
     <Compile Include="Footer.ascx.designer.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Principal.Master.cs">
-      <DependentUpon>Principal.Master</DependentUpon>
+    <Compile Include="Administracion.master.cs">
+      <DependentUpon>Administracion.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Principal.Master.designer.cs">
-      <DependentUpon>Principal.Master</DependentUpon>
+    <Compile Include="Administracion.master.designer.cs">
+      <DependentUpon>Administracion.master</DependentUpon>
     </Compile>
     <Compile Include="RContacto.aspx.cs">
       <DependentUpon>RContacto.aspx</DependentUpon>
@@ -124,12 +102,34 @@
     <Compile Include="RContacto.aspx.designer.cs">
       <DependentUpon>RContacto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Resumen.Master.cs">
-      <DependentUpon>Resumen.Master</DependentUpon>
+    <Compile Include="Resumen.master.cs">
+      <DependentUpon>Resumen.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Resumen.Master.designer.cs">
-      <DependentUpon>Resumen.Master</DependentUpon>
+    <Compile Include="Resumen.master.designer.cs">
+      <DependentUpon>Resumen.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ATorneos.aspx.cs">
+      <DependentUpon>ATorneos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ATorneos.aspx.designer.cs">
+      <DependentUpon>ATorneos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AEquipos.aspx.cs">
+      <DependentUpon>AEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AEquipos.aspx.designer.cs">
+      <DependentUpon>AEquipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="RListadoEquipos.aspx.cs">
       <DependentUpon>RListadoEquipos.aspx</DependentUpon>
@@ -141,8 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Principal.Master" />
-    <Content Include="Administracion.Master" />
-    <Content Include="Resumen.Master" />
+    <Content Include="Administracion.master" />
+    <Content Include="Resumen.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -10,6 +10,6 @@
 namespace Trabajo_Practico___Programacion_Web_3 {
     
     
-    public partial class AEquipos {
+    public partial class WebForm2 {
     }
 }

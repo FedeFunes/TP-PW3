@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Trabajo_Practico___Programacion_Web_3.Default" %>
-<asp:Content ID="ContenidoHead" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+
 <asp:Content ID="ContenidoPagina" ContentPlaceHolderID="PageContainer" runat="server">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">

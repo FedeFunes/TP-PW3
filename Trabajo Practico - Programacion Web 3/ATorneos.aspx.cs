@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Trabajo_Practico___Programacion_Web_3
 {
-    public partial class ATorneos : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
