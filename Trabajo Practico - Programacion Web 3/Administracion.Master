@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Crear Equipo</a>
+                        <a href="AEquipos.aspx">Crear Equipo</a>
                     </li>
                     <li>
-                        <a href="#">Crear Jugador</a>
+                        <a href="AJugadores.aspx">Crear Jugador</a>
                     </li>
                     <li>
-                        <a href="#">Crear Torneo</a>
+                        <a href="ATorneos.aspx">Crear Torneo</a>
                     </li>
                 </ul>
             </div>
@@ -29,7 +29,10 @@
         <!-- /.container -->
     </nav>
         
-    <asp:ContentPlaceHolder ID="PageContainer" runat="server">
+    <div class="container">
+        <asp:ContentPlaceHolder ID="PageContainer" runat="server">
         
-    </asp:ContentPlaceHolder>
+        </asp:ContentPlaceHolder>
+    </div>
+
 </asp:Content>

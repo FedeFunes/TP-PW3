@@ -19,9 +19,13 @@
 </head>
 <body>
 
-    <asp:ContentPlaceHolder ID="PageContainer" runat="server">
+    <form id="form" runat="server">
+        <div class="container">
+            <asp:ContentPlaceHolder ID="PageContainer" runat="server">
 
-    </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
 
     <ft:Footer ID="ucFooter" runat="server" />
    

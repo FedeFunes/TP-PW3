@@ -51,3 +51,7 @@ code {
 .bloque-texto {
     display:block;
 }
+
+div.checkbox input[type=checkbox] {
+    margin-left: 0;
+}
