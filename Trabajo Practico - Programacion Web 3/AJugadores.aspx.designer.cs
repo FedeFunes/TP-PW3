@@ -13,31 +13,40 @@ namespace Trabajo_Practico___Programacion_Web_3 {
     public partial class AJugadores {
         
         /// <summary>
-        /// Control txtNombreEquipo.
+        /// Control txtNombreJugador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreEquipo;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreJugador;
         
         /// <summary>
-        /// Control ddlTorneos.
+        /// Control txtApellidoJugador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTorneos;
+        protected global::System.Web.UI.WebControls.TextBox txtApellidoJugador;
         
         /// <summary>
-        /// Control txtMontoAbonado.
+        /// Control txtEdadJugador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMontoAbonado;
+        protected global::System.Web.UI.WebControls.TextBox txtEdadJugador;
+        
+        /// <summary>
+        /// Control ddlEquipos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEquipos;
         
         /// <summary>
         /// Control btnCrear.

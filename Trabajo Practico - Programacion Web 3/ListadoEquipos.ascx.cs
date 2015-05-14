@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Trabajo_Practico___Programacion_Web_3
 {
-    public partial class Site2 : System.Web.UI.MasterPage
+    public partial class ListadoEquipos : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

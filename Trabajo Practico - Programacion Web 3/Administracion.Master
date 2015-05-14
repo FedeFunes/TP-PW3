@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+                        <a href="ATorneos.aspx">Crear Torneo</a>
+                    </li>
+                    <li>
                         <a href="AEquipos.aspx">Crear Equipo</a>
                     </li>
                     <li>
                         <a href="AJugadores.aspx">Crear Jugador</a>
-                    </li>
-                    <li>
-                        <a href="ATorneos.aspx">Crear Torneo</a>
                     </li>
                 </ul>
             </div>

@@ -11,5 +11,14 @@ namespace Trabajo_Practico___Programacion_Web_3 {
     
     
     public partial class RListadoEquipos {
+        
+        /// <summary>
+        /// Control ucListadoEquipos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Trabajo_Practico___Programacion_Web_3.ListadoEquipos ucListadoEquipos;
     }
 }

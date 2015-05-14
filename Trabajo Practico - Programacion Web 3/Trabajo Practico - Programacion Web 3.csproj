@@ -60,6 +60,7 @@
     <Content Include="AJugadores.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Footer.ascx" />
+    <Content Include="ListadoEquipos.ascx" />
     <Content Include="RContacto.aspx" />
     <Content Include="RListadoEquipos.aspx" />
     <Content Include="Web.config" />
@@ -94,6 +95,13 @@
     </Compile>
     <Compile Include="Administracion.master.designer.cs">
       <DependentUpon>Administracion.master</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoEquipos.ascx.cs">
+      <DependentUpon>ListadoEquipos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoEquipos.ascx.designer.cs">
+      <DependentUpon>ListadoEquipos.ascx</DependentUpon>
     </Compile>
     <Compile Include="RContacto.aspx.cs">
       <DependentUpon>RContacto.aspx</DependentUpon>
