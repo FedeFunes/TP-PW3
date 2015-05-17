@@ -22,6 +22,24 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtNombreJugador;
         
         /// <summary>
+        /// Control ValidaNombreJugador1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidaNombreJugador1;
+        
+        /// <summary>
+        /// Control ValidaNombreJugador2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaNombreJugador2;
+        
+        /// <summary>
         /// Control txtApellidoJugador.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellidoJugador;
+        
+        /// <summary>
+        /// Control ValidaApellidoJugador1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidaApellidoJugador1;
+        
+        /// <summary>
+        /// Control ValidaApellidoJugador2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaApellidoJugador2;
         
         /// <summary>
         /// Control txtEdadJugador.
@@ -40,6 +76,24 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtEdadJugador;
         
         /// <summary>
+        /// Control ValidaEdadJugador1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidaEdadJugador1;
+        
+        /// <summary>
+        /// Control ValidaEdadJugador2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaEdadJugador2;
+        
+        /// <summary>
         /// Control ddlEquipos.
         /// </summary>
         /// <remarks>
@@ -47,6 +101,15 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEquipos;
+        
+        /// <summary>
+        /// Control ValidaEquipos1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaEquipos1;
         
         /// <summary>
         /// Control ValidationSummary1.

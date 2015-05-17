@@ -8,23 +8,24 @@
                 <div class="form-group">
                     <label for="txtNombreEquipo">Nombre</label>
                     <asp:TextBox ID="txtNombreEquipo" runat="server" CssClass="form-control" placeholder="Ingrese nombre del equipo"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="El campo Nombre no puede estar vacío" Text="(*)" ControlToValidate="txtNombreEquipo"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="ValidaNombreEquipo1" runat="server" ErrorMessage="Campo Nombre: No puede estar vacío." Text="(*)" ControlToValidate="txtNombreEquipo" Display="Dynamic" EnableClientScript="true"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="ValidaNombreEquipo2" runat="server" ErrorMessage="Campo Nombre: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z])+" ControlToValidate="txtNombreEquipo" Display="Dynamic" EnableClientScript="true"></asp:RegularExpressionValidator>
                 </div>
                          
                 <div class="form-group">
                     <asp:DropDownList ID="ddlTorneos" runat="server" CssClass="form-control"></asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="El campo Nombre no puede estar vacío" Text="(*)" ControlToValidate="ddlTorneos"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="ValidaTorneos" runat="server" ErrorMessage="Campo Torneo: Elija un torneo." Text="(*)" ValidationExpression="^Torneo\d$" ControlToValidate="ddlTorneos" Display="Dynamic" EnableClientScript="true"></asp:RegularExpressionValidator>
                 </div>
 
 
                 <div class="form-group">
                     <label for="txtMontoAbonado">Monto Abonado</label>
                     <asp:TextBox ID="txtMontoAbonado" runat="server" CssClass="form-control" placeholder="Ingrese monto"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="El campo Monto no puede estar vacío" Text="(*)" ControlToValidate="txtMontoAbonado"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Campo Monto: solo numeros y max 5" Text="(*)" ValidationExpression="\d{5}" ControlToValidate="txtMontoAbonado"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="ValidaMontoAbonado1" runat="server" ErrorMessage="Campo Monto: No puede estar vacío." Text="(*)" ControlToValidate="txtMontoAbonado" Display="Dynamic" EnableClientScript="true"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="ValidaMontoAbonado2" runat="server" ErrorMessage="Campo Monto: Solo números." Text="(*)" ValidationExpression="\d" ControlToValidate="txtMontoAbonado" Display="Dynamic" EnableClientScript="true"></asp:RegularExpressionValidator>
                 </div>
 
-                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
                 <asp:Button ID="btnCrear" runat="server" Text="Crear Equipo" CssClass="btn btn-default" />    
             </div>
         </div>
