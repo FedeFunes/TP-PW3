@@ -23,6 +23,7 @@
                 <div class="form-group">
                     <asp:DropDownList ID="ddlEquipos" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
+
                 <asp:Button ID="btnCrear" runat="server" Text="Crear Jugador" CssClass="btn btn-default" />     
             </div>
         </div>
