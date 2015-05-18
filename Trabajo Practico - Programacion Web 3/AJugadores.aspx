@@ -39,5 +39,4 @@
     </div>
 </div>
 <!-- /.container -->
-<div></div>
 </asp:Content>
