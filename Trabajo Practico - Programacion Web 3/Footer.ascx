@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="container">
         <span class="bloque-texto">Universidad Nacional de la Matanza - Dpto. de Ingenier&iacute;a y Investigaciones Tecnol&oacute;gicas</span>
-        <span class="bloque-texto">Tecnicatura en Desarrollo Web - Programaci&oacuten Web III</span>
+        <span class="bloque-texto">Tecnicatura en Desarrollo Web - Programaci&oacute;n Web III</span>
         <span class="bloque-texto">Daniela Mohamed - Federico Funes</span>
     </div>
 </footer>
