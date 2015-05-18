@@ -22,7 +22,7 @@
                     <label for="txtMontoAbonado">Monto Abonado</label>
                     <asp:TextBox ID="txtMontoAbonado" runat="server" CssClass="form-control" placeholder="Ingrese monto"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaMontoAbonado1" runat="server" ErrorMessage="Campo Monto: No puede estar vacío." Text="(*)" ControlToValidate="txtMontoAbonado" Display="Dynamic" EnableClientScript="true"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaMontoAbonado2" runat="server" ErrorMessage="Campo Monto: Solo números." Text="(*)" ValidationExpression="\d" ControlToValidate="txtMontoAbonado" Display="Dynamic" EnableClientScript="true"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="ValidaMontoAbonado2" runat="server" ErrorMessage="Campo Monto: Solo números." Text="(*)" ValidationExpression="\d+" ControlToValidate="txtMontoAbonado" Display="Dynamic" EnableClientScript="true"></asp:RegularExpressionValidator>
                 </div>
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
