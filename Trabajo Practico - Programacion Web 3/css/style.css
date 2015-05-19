@@ -60,3 +60,8 @@ code {
 div.checkbox input[type=checkbox] {
     margin-left: 0;
 }
+
+.errorForm {
+    display: none;
+	font-size: 12px;
+}

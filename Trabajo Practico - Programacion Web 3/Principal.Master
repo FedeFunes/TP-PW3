@@ -14,10 +14,11 @@
     <link href="css/style.css" rel="stylesheet"/>
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
-   
+    <!-- Validaciones Formularios -->
     <script src="js/Ajugadores.js"></script>
     <script src="js/AEquipos.js"></script>
     <script src="js/Atorneos.js"></script>
+    <script src="js/Rcontacto.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
 </head>

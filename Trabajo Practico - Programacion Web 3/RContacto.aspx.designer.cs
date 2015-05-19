@@ -22,6 +22,24 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtNombreCompleto;
         
         /// <summary>
+        /// Control ValidaNombreCompleto1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidaNombreCompleto1;
+        
+        /// <summary>
+        /// Control ValidaNombreEquipo2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaNombreEquipo2;
+        
+        /// <summary>
         /// Control txtEmail.
         /// </summary>
         /// <remarks>
@@ -31,13 +49,22 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// Control ValidaEmail.
+        /// Control ValidaEmail1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidaEmail1;
+        
+        /// <summary>
+        /// Control ValidaEmail2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaEmail2;
         
         /// <summary>
         /// Control txtComentario.
@@ -49,30 +76,21 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtComentario;
         
         /// <summary>
-        /// Control Requeridos.
+        /// Control ValidaComentario1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Requeridos;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidaComentario1;
         
         /// <summary>
-        /// Control Texto.
+        /// Control btnRegistrarContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator Texto;
-        
-        /// <summary>
-        /// Control btnRegistrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistrar;
+        protected global::System.Web.UI.WebControls.Button btnRegistrarContacto;
     }
 }

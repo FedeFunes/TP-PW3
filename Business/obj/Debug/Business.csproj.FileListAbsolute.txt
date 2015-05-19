@@ -3,3 +3,8 @@ C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Business\bin\Deb
 C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
 C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Business\obj\Debug\Business.dll
 C:\Users\Danielita\Documents\Visual Studio 2012\Projects\TP-PW3\Business\obj\Debug\Business.pdb
+C:\Users\Federico\Desktop\TP-PW3\Business\bin\Debug\Business.dll
+C:\Users\Federico\Desktop\TP-PW3\Business\bin\Debug\Business.pdb
+C:\Users\Federico\Desktop\TP-PW3\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Federico\Desktop\TP-PW3\Business\obj\Debug\Business.dll
+C:\Users\Federico\Desktop\TP-PW3\Business\obj\Debug\Business.pdb
