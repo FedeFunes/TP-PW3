@@ -9,7 +9,7 @@
         var errorDdlTorneos = $("#errorDdlTorneos");
         var errorMontoAbonado = $("#errorMontoAbonado");
 
-        if ( txtNombreEquipo == null || txtNombreEquipo.length == 0 || D.test(txtNombreEquipo) ) {
+        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !/^([A-Z]|[a-z])+$/.test(txtNombreEquipo)) {
             errorNombreEquipo.css("display", "inline");
             return false;
         } else {
