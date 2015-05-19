@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resumen.master" AutoEventWireup="true" CodeBehind="RContacto.aspx.cs" Inherits="Trabajo_Practico___Programacion_Web_3.RContacto" %>
 <asp:Content ID="contenidoHead" ContentPlaceHolderID="head" runat="server">
-    <!-- <script src="js/Rcontacto.js"></script> -->
+    <script src="js/Rcontacto.js"></script> 
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageContainer" runat="server">
     <div class="contenido">
