@@ -1,4 +1,9 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="Resumen.master.cs" Inherits="Trabajo_Practico___Programacion_Web_3.NestedMasterPage2" %>
+<asp:Content ID="contenidoHead" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageContainer" runat="server">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
