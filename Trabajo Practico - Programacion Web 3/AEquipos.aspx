@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion.master" AutoEventWireup="true" CodeBehind="AEquipos.aspx.cs" Inherits="Trabajo_Practico___Programacion_Web_3.WebForm2" %>
 <asp:Content ID="contenidoHead" ContentPlaceHolderID="head" runat="server">
-    <script src="js/AEquipos.js"></script>
+    <script src="js/AEquipos.js"></script> 
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageContainer" runat="server">
 <!-- Page Content -->
@@ -31,6 +31,7 @@
                 </div>
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
+                
                 <asp:Button ID="btnCrearEquipo" runat="server" Text="Crear Equipo" CssClass="btn btn-default" />    
             </div>
         </div>

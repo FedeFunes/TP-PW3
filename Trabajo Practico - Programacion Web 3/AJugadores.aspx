@@ -20,7 +20,7 @@
                     <label for="txtApellidoJugador">Apellido</label>
                     <asp:TextBox ID="txtApellidoJugador" runat="server" CssClass="form-control" placeholder="Ingrese apellido del jugador"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaApellidoJugador1" runat="server" ErrorMessage="Campo Apellido: No puede estar vacío." Text="(*)" ControlToValidate="txtApellidoJugador" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaApellidoJugador2" runat="server" ErrorMessage="Campo Jugador: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z])+" ControlToValidate="txtApellidoJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="ValidaApellidoJugador2" runat="server" ErrorMessage="Campo Apellido: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z])+" ControlToValidate="txtApellidoJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
                     <span class="errorForm text-danger" id="errorApellidoJugador">Error: Campo vacio o el apellido no son solo letras.</span>
                 </div>
 
@@ -39,6 +39,7 @@
                 </div>
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
+                
                 <asp:Button ID="btnCrearJugador" runat="server" Text="Crear Jugador" CssClass="btn btn-default" />     
             </div>
         </div>
