@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="345d4c26b15c42ad8ffe5afc8e4c7003" Name="Diagrama1">
+        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Contacto" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Equipo" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Jugador" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Torneo" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo" ManuallyRouted="false" />
+        <AssociationConnector Association="PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
