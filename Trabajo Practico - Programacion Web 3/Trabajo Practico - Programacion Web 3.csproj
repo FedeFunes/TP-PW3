@@ -38,7 +38,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -63,6 +69,7 @@
     <Content Include="ListadoEquipos.ascx" />
     <Content Include="RContacto.aspx" />
     <Content Include="RListadoEquipos.aspx" />
+    <Content Include="Servicio.asmx" />
     <Content Include="Web.config" />
     <Content Include="ATorneos.aspx" />
     <Content Include="AEquipos.aspx" />
@@ -75,12 +82,33 @@
     <Compile Include="AJugadores.aspx.designer.cs">
       <DependentUpon>AJugadores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Contacto.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipo.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
     </Compile>
     <Compile Include="Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
@@ -95,6 +123,9 @@
     </Compile>
     <Compile Include="Administracion.master.designer.cs">
       <DependentUpon>Administracion.master</DependentUpon>
+    </Compile>
+    <Compile Include="Jugador.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
     </Compile>
     <Compile Include="ListadoEquipos.ascx.cs">
       <DependentUpon>ListadoEquipos.ascx</DependentUpon>
@@ -146,11 +177,36 @@
     <Compile Include="RListadoEquipos.aspx.designer.cs">
       <DependentUpon>RListadoEquipos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Servicio.asmx.cs">
+      <DependentUpon>Servicio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Torneo.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Principal.Master" />
     <Content Include="Administracion.master" />
     <Content Include="Resumen.master" />
+    <EntityDeploy Include="Datos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Datos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Datos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Datos.edmx</DependentUpon>
+      <LastGenOutput>Datos.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datos.edmx.diagram">
+      <DependentUpon>Datos.edmx</DependentUpon>
+    </Content>
+    <Content Include="Datos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Datos.edmx</DependentUpon>
+      <LastGenOutput>Datos.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,6 +219,9 @@
       <Project>{70f7e7cd-1667-4e57-be65-71b724f41e79}</Project>
       <Name>Business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
