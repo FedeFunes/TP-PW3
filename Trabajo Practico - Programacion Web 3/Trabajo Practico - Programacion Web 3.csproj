@@ -66,10 +66,11 @@
     <Content Include="AJugadores.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Footer.ascx" />
+    <Content Include="js\obtenerEquipos.js" />
     <Content Include="ListadoEquipos.ascx" />
     <Content Include="RContacto.aspx" />
     <Content Include="RListadoEquipos.aspx" />
-    <Content Include="Servicio.asmx" />
+    <Content Include="servicios\Servicio.asmx" />
     <Content Include="Web.config" />
     <Content Include="ATorneos.aspx" />
     <Content Include="AEquipos.aspx" />
@@ -177,7 +178,7 @@
     <Compile Include="RListadoEquipos.aspx.designer.cs">
       <DependentUpon>RListadoEquipos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Servicio.asmx.cs">
+    <Compile Include="servicios\Servicio.asmx.cs">
       <DependentUpon>Servicio.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
@@ -189,6 +190,7 @@
     <Content Include="Principal.Master" />
     <Content Include="Administracion.master" />
     <Content Include="Resumen.master" />
+    <Content Include="packages.config" />
     <EntityDeploy Include="Datos.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Datos.Designer.cs</LastGenOutput>
@@ -206,19 +208,12 @@
       <DependentUpon>Datos.edmx</DependentUpon>
       <LastGenOutput>Datos.cs</LastGenOutput>
     </Content>
-    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{70f7e7cd-1667-4e57-be65-71b724f41e79}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

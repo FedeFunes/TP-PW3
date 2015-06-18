@@ -13,7 +13,7 @@ namespace Trabajo_Practico___Programacion_Web_3
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // Para permitir que se llame a este servicio web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
-    // [System.Web.Script.Services.ScriptService]
+    [System.Web.Script.Services.ScriptService]
     public class Servicio : System.Web.Services.WebService
     {
 
@@ -26,6 +26,17 @@ namespace Trabajo_Practico___Programacion_Web_3
         [WebMethod]
         public void ObtenerEquipos(bool incluirDeTorneosInactivos)
         {
+            List<Equipo> l = new List<Equipo>();
+            PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+            if (incluirDeTorneosInactivos)
+	        {
+                l = contexto.Equipo.ToList<Equipo>();		        
+	        }
+            else
+            {
+                var activo = true;
+                l = contexto.Equipo.Where(c => c.Torneo.Activo == activo).ToList<Equipo>();
+            }
         }
     }
 }

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TorneosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TorneosModelStoreContainer">
+    <EntitySet Name="Contacto" EntityType="TorneosModel.Store.Contacto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipo" EntityType="TorneosModel.Store.Equipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Jugador" EntityType="TorneosModel.Store.Jugador" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Torneo" EntityType="TorneosModel.Store.Torneo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Equipo_Torneo" Association="TorneosModel.Store.FK_Equipo_Torneo">
+      <End Role="Torneo" EntitySet="Torneo" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jugador_Equipo" Association="TorneosModel.Store.FK_Jugador_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Jugador" EntitySet="Jugador" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCompleto" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Comentario" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="MontoAbonado" Type="int" />
+    <Property Name="IdTorneo" Type="int" />
+  </EntityType>
+  <EntityType Name="Jugador">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Apellido" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Edad" Type="int" />
+    <Property Name="IdEquipo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Torneo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Equipo_Torneo">
+    <End Role="Torneo" Type="TorneosModel.Store.Torneo" Multiplicity="0..1" />
+    <End Role="Equipo" Type="TorneosModel.Store.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Torneo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="IdTorneo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jugador_Equipo">
+    <End Role="Equipo" Type="TorneosModel.Store.Equipo" Multiplicity="1" />
+    <End Role="Jugador" Type="TorneosModel.Store.Jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jugador">
+        <PropertyRef Name="IdEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

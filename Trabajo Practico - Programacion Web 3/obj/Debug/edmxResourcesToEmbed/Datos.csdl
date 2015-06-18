@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TorneosModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PW3_20152C_TP2_TorneosEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacto" EntityType="TorneosModel.Contacto" />
+    <EntitySet Name="Equipo" EntityType="TorneosModel.Equipo" />
+    <EntitySet Name="Jugador" EntityType="TorneosModel.Jugador" />
+    <EntitySet Name="Torneo" EntityType="TorneosModel.Torneo" />
+    <AssociationSet Name="FK_Equipo_Torneo" Association="TorneosModel.FK_Equipo_Torneo">
+      <End Role="Torneo" EntitySet="Torneo" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jugador_Equipo" Association="TorneosModel.FK_Jugador_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Jugador" EntitySet="Jugador" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Comentario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="MontoAbonado" Type="Int32" />
+    <Property Name="IdTorneo" Type="Int32" />
+    <NavigationProperty Name="Torneo" Relationship="TorneosModel.FK_Equipo_Torneo" FromRole="Equipo" ToRole="Torneo" />
+    <NavigationProperty Name="Jugador" Relationship="TorneosModel.FK_Jugador_Equipo" FromRole="Equipo" ToRole="Jugador" />
+  </EntityType>
+  <EntityType Name="Jugador">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Apellido" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Edad" Type="Int32" />
+    <Property Name="IdEquipo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Equipo" Relationship="TorneosModel.FK_Jugador_Equipo" FromRole="Jugador" ToRole="Equipo" />
+  </EntityType>
+  <EntityType Name="Torneo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Equipo" Relationship="TorneosModel.FK_Equipo_Torneo" FromRole="Torneo" ToRole="Equipo" />
+  </EntityType>
+  <Association Name="FK_Equipo_Torneo">
+    <End Role="Torneo" Type="TorneosModel.Torneo" Multiplicity="0..1" />
+    <End Role="Equipo" Type="TorneosModel.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Torneo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="IdTorneo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jugador_Equipo">
+    <End Role="Equipo" Type="TorneosModel.Equipo" Multiplicity="1" />
+    <End Role="Jugador" Type="TorneosModel.Jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jugador">
+        <PropertyRef Name="IdEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
