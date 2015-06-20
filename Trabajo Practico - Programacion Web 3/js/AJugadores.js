@@ -11,14 +11,16 @@
         var errorEdadJugador = $("#errorEdadJugador");
         var errorDdlEquipos = $("#errorDdlEquipos");
 
-        if (txtNombreJugador == null || txtNombreJugador.length == 0 || !/^([A-Z]|[a-z])+$/.test(txtNombreJugador)) {
+        var exp = "/^([A-Z]|[a-z]|\s)+$/";
+
+        if (txtNombreJugador == null || txtNombreJugador.length == 0 || !exp.test(txtNombreJugador)) {
             errorNombreJugador.css("display", "inline");
             return false;
         } else {
             errorNombreJugador.css("display", "none");
         }
 
-        if (txtApellidoJugador == null || txtApellidoJugador.length == 0 || !/^([A-Z]|[a-z])+$/.test(txtApellidoJugador)) {
+        if (txtApellidoJugador == null || txtApellidoJugador.length == 0 || !exp.test(txtApellidoJugador)) {
             errorApellidoJugador.css("display", "inline");
             return false;
         } else {
@@ -32,7 +34,7 @@
             errorEdadJugador.css("display", "none");
         }
 
-        if (ddlEquipos == ("Elija equipo")) {
+        if (ddlEquipos.val == 0) {
             errorDdlEquipos.css("display", "inline");
             return false;
         } else {

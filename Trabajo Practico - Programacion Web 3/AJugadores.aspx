@@ -12,16 +12,16 @@
                     <label for="txtNombreJugador">Nombre</label>
                     <asp:TextBox ID="txtNombreJugador" runat="server" CssClass="form-control" placeholder="Ingrese nombre del jugador"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaNombreJugador1" runat="server" ErrorMessage="Campo Nombre: No puede estar vacío." Text="(*)" ControlToValidate="txtNombreJugador" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaNombreJugador2" runat="server" ErrorMessage="Campo Nombre: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z])+" ControlToValidate="txtNombreJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
-                    <span class="errorForm text-danger" id="errorNombreJugador">Error: Campo vacio o el nombre no son solo letras.</span>
+                    <asp:RegularExpressionValidator ID="ValidaNombreJugador2" runat="server" ErrorMessage="Campo Nombre: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z]|\s)+" ControlToValidate="txtNombreJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    <span class="errorForm text-danger" id="errorNombreJugador">Error: Campo vacio o inválido (deben ser solo letras).</span>
                 </div>
 
                 <div class="form-group">
                     <label for="txtApellidoJugador">Apellido</label>
                     <asp:TextBox ID="txtApellidoJugador" runat="server" CssClass="form-control" placeholder="Ingrese apellido del jugador"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaApellidoJugador1" runat="server" ErrorMessage="Campo Apellido: No puede estar vacío." Text="(*)" ControlToValidate="txtApellidoJugador" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaApellidoJugador2" runat="server" ErrorMessage="Campo Apellido: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z])+" ControlToValidate="txtApellidoJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
-                    <span class="errorForm text-danger" id="errorApellidoJugador">Error: Campo vacio o el apellido no son solo letras.</span>
+                    <asp:RegularExpressionValidator ID="ValidaApellidoJugador2" runat="server" ErrorMessage="Campo Apellido: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z]|\s)+" ControlToValidate="txtApellidoJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    <span class="errorForm text-danger" id="errorApellidoJugador">Error: Campo vacio o inválido (deben ser solo letras).</span>
                 </div>
 
                 <div class="form-group">
@@ -29,18 +29,18 @@
                     <asp:TextBox ID="txtEdadJugador" runat="server" CssClass="form-control" placeholder="Ingrese edad del jugador"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaEdadJugador1" runat="server" ErrorMessage="Campo Edad: No puede estar vacío." Text="(*)" ControlToValidate="txtEdadJugador" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="ValidaEdadJugador2" runat="server" ErrorMessage="Campo Edad: Solo numeros." Text="(*)" ValidationExpression="\d+" ControlToValidate="txtEdadJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
-                    <span class="errorForm text-danger" id="errorEdadJugador">Error: Campo vacio o la edad no son solo numeros.</span>
+                    <span class="errorForm text-danger" id="errorEdadJugador">Error: Campo vacio o inválido (deben ser solo números).</span>
                 </div>
                          
                 <div class="form-group">
                     <asp:DropDownList ID="ddlEquipos" runat="server" CssClass="form-control"></asp:DropDownList>
-                    <asp:RegularExpressionValidator ID="ValidaEquipos1" runat="server" ErrorMessage="Elija un Equipo." Text="(*)" ValidationExpression="^Equipo\d$" ControlToValidate="ddlEquipos" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    <%--<asp:RegularExpressionValidator ID="ValidaEquipos1" runat="server" ErrorMessage="Elija un Equipo." Text="(*)" ValidationExpression="^Equipo\d$" ControlToValidate="ddlEquipos" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>--%>
                     <span class="errorForm text-danger" id="errorDdlEquipos">Error: Elija un equipo.</span>
                 </div>
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
                 
-                <asp:Button ID="btnCrearJugador" runat="server" Text="Crear Jugador" CssClass="btn btn-default" />     
+                <asp:Button ID="btnCrearJugador" runat="server" Text="Crear Jugador" CssClass="btn btn-default" OnClick="btnCrearJugador_Click" />     
             </div>
         </div>
         <!-- /.row -->

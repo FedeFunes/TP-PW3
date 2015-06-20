@@ -63,7 +63,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminTorneos.aspx" />
     <Content Include="AJugadores.aspx" />
+    <Content Include="contacto-resultado.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Footer.ascx" />
     <Content Include="js\obtenerEquipos.js" />
@@ -76,12 +78,26 @@
     <Content Include="AEquipos.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminTorneos.aspx.cs">
+      <DependentUpon>AdminTorneos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTorneos.aspx.designer.cs">
+      <DependentUpon>AdminTorneos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AJugadores.aspx.cs">
       <DependentUpon>AJugadores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AJugadores.aspx.designer.cs">
       <DependentUpon>AJugadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contacto-resultado.aspx.cs">
+      <DependentUpon>contacto-resultado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contacto-resultado.aspx.designer.cs">
+      <DependentUpon>contacto-resultado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contacto.cs">
       <DependentUpon>Datos.tt</DependentUpon>

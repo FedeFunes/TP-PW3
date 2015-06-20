@@ -19,12 +19,27 @@ namespace Trabajo_Practico___Programacion_Web_3
 
         public void CargaEquipos()
         {
-            ddlEquipos.Items.Add(new ListItem("Elija equipo"));
-            ddlEquipos.Items.Add(new ListItem("Equipo1"));
-            ddlEquipos.Items.Add(new ListItem("Equipo2"));
-            ddlEquipos.Items.Add(new ListItem("Equipo3"));
-            ddlEquipos.Items.Add(new ListItem("Equipo4"));
-            ddlEquipos.Items.Add(new ListItem("Equipo5"));
+            PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+            ddlEquipos.DataSource = contexto.Equipo.ToList();
+            ddlEquipos.DataValueField = "Id";
+            ddlEquipos.DataTextField = "Nombre";
+            ddlEquipos.DataBind();
+        }
+
+        protected void btnCrearJugador_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                Jugador j = new Jugador();
+                j.Nombre = txtNombreJugador.Text;
+                j.Apellido = txtApellidoJugador.Text;
+                j.Edad = int.Parse(txtEdadJugador.Text);
+                j.IdEquipo = int.Parse(ddlEquipos.SelectedValue);
+                contexto.Jugador.Add(j);
+                contexto.SaveChanges();
+                Response.Redirect("AJugadores.aspx");                
+            }
         }
     }
 }

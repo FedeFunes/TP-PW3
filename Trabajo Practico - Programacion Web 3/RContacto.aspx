@@ -10,8 +10,8 @@
                     <label for="txtNombreCompleto">Nombre completo</label>
                     <asp:TextBox ID="txtNombreCompleto" runat="server" CssClass="form-control" placeholder="Ingrese nombre completo" ValidationGroup="requerido"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaNombreCompleto1" runat="server" ErrorMessage="Campo Nombre: No puede estar vacío." Text="(*)" ControlToValidate="txtNombreCompleto" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaNombreEquipo2" runat="server" ErrorMessage="Campo Nombre: No son 2 nombres o no hay solo letras." Text="(*)" ValidationExpression="^([a-z]|[A-Z])+\s([a-z]|[A-Z])+$" ControlToValidate="txtNombreCompleto" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
-                    <span class="errorForm text-danger" id="errorNombreCompleto">Error: Campo vacio o no son 2 nombres o no hay solo letras.</span>
+                    <asp:RegularExpressionValidator ID="ValidaNombreEquipo2" runat="server" ErrorMessage="Campo Nombre: Debe haber al menos dos palabras y solo letras." Text="(*)" ValidationExpression="^([a-z]|[A-Z])+\s([a-z]|[A-Z])+$" ControlToValidate="txtNombreCompleto" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    <span class="errorForm text-danger" id="errorNombreCompleto">Error: Campo vacio o inválido (al menos dos palabras y solo letras).</span>
                 </div>
                 
                 <div class="form-group">
@@ -31,7 +31,7 @@
                 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
 
-                <asp:Button ID="btnRegistrarContacto" runat="server" Text="Registrar usuario" CssClass="btn btn-default"/>
+                <asp:Button ID="btnRegistrarContacto" runat="server" Text="Registrar usuario" CssClass="btn btn-default" OnClick="btnRegistrarContacto_Click"/>
             </div>
         </div>
         <!-- /.row -->

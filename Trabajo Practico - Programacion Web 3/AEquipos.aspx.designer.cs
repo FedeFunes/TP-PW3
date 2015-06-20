@@ -49,15 +49,6 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.DropDownList ddlTorneos;
         
         /// <summary>
-        /// Control ValidaTorneos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaTorneos;
-        
-        /// <summary>
         /// Control txtMontoAbonado.
         /// </summary>
         /// <remarks>

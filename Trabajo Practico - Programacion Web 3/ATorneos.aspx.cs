@@ -13,5 +13,20 @@ namespace Trabajo_Practico___Programacion_Web_3
         {
 
         }
+
+        protected void btnCrearTorneo_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                Torneo t = new Torneo();
+                t.Nombre = txtNombreTorneo.Text;
+                t.Activo = cbActivoTorneo.Checked;
+                contexto.Torneo.Add(t);
+                contexto.SaveChanges();    
+                Response.Redirect("ATorneos.aspx");            
+            }
+
+        }
     }
 }

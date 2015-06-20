@@ -24,7 +24,7 @@ namespace Trabajo_Practico___Programacion_Web_3
         }
 
         [WebMethod]
-        public void ObtenerEquipos(bool incluirDeTorneosInactivos)
+        public List<Equipo> ObtenerEquipos(bool incluirDeTorneosInactivos)
         {
             List<Equipo> l = new List<Equipo>();
             PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
@@ -37,6 +37,8 @@ namespace Trabajo_Practico___Programacion_Web_3
                 var activo = true;
                 l = contexto.Equipo.Where(c => c.Torneo.Activo == activo).ToList<Equipo>();
             }
+
+            return l;
         }
     }
 }

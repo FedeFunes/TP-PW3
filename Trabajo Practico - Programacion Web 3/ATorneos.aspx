@@ -12,8 +12,8 @@
                     <label for="txtNombreTorneo">Nombre</label>
                     <asp:TextBox ID="txtNombreTorneo" runat="server" CssClass="form-control" placeholder="Ingrese nombre del torneo"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaNombreTorneo1" runat="server" ErrorMessage="Campo Nombre: No puede estar vacío:" Text="(*)" ControlToValidate="txtNombreTorneo" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaNombreTorneo2" runat="server" ErrorMessage="Campo Nombre: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z])+" ControlToValidate="txtNombreTorneo" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
-                    <span class="errorForm text-danger" id="errorNombreTorneo">Error: Campo vacio o el nombre no son solo letras.</span> 
+                    <asp:RegularExpressionValidator ID="ValidaNombreTorneo2" runat="server" ErrorMessage="Campo Nombre: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z]|\s)+" ControlToValidate="txtNombreTorneo" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    <span class="errorForm text-danger" id="errorNombreTorneo">Error: Campo vacio o inválido (deben ser solo letras).</span> 
                 </div>
                
                 <div class="checkbox">
@@ -22,7 +22,7 @@
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
                 
-                <asp:Button ID="btnCrearTorneo" runat="server" Text="Crear Torneo" CssClass="btn btn-default"/> 
+                <asp:Button ID="btnCrearTorneo" runat="server" Text="Crear Torneo" CssClass="btn btn-default" OnClick="btnCrearTorneo_Click"/> 
             </div>
         </div>
         <!-- /.row -->

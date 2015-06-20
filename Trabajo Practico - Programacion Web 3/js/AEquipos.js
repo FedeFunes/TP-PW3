@@ -9,14 +9,16 @@
         var errorDdlTorneos = $("#errorDdlTorneos");
         var errorMontoAbonado = $("#errorMontoAbonado");
 
-        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !/^([A-Z]|[a-z])+$/.test(txtNombreEquipo)) {
+        var exp = "/^[a-zA-Z\s]*$/";
+
+        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !exp.test(txtNombreEquipo)) {
             errorNombreEquipo.css("display", "inline");
             return false;
         } else {
             errorNombreEquipo.css("display", "none");
         }
 
-        if ( ddlTorneos == ("Elija torneo") ) {
+        if ( ddlTorneos.val == 0 ) {
             errorDdlTorneos.css("display", "inline");
             return false;
         } else {

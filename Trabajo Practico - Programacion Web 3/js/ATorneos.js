@@ -5,7 +5,9 @@
 
         var errorNombreTorneo = $("#errorNombreTorneo");
 
-        if (txtNombreTorneo == null || txtNombreTorneo.length == 0 || !/^([A-Z]|[a-z])+$/.test(txtNombreTorneo)) {
+        var exp = "/^[A-Za-z]\s$/";
+
+        if (txtNombreTorneo == null || txtNombreTorneo.length == 0 || !exp.test(txtNombreTorneo)) {
             errorNombreTorneo.css("display", "inline");
             return false;
         } else {

@@ -34,7 +34,7 @@ function ObtenerEquipos(inactivos) {
 
         $.each(listado, function (index, obj) {
             $('#tbListadoEquipos').append(
-                            $('<tr><td></td></tr>').html(obj.Nombre)
+                            $('<li></li>').html(obj.Nombre)
                         );
         });
     }

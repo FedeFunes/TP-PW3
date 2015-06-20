@@ -26,6 +26,15 @@
                     <li>
                         <a href="AJugadores.aspx">Crear Jugador</a>
                     </li>
+                    <li>
+                        <a href="AdminTorneos.aspx">Administrar Torneos</a>
+                    </li>
+                    <li>
+                        <a href="AdminEquipos.aspx">Administrar Equipos</a>
+                    </li>
+                    <li>
+                        <a href="AdminJugadores.aspx">Administrar Jugadores</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
