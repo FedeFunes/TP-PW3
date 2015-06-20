@@ -8,10 +8,9 @@
         var errorNombreEquipo = $("#errorNombreEquipo");
         var errorDdlTorneos = $("#errorDdlTorneos");
         var errorMontoAbonado = $("#errorMontoAbonado");
+ 
 
-        var exp = "/^[a-zA-Z\s]*$/";
-
-        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !exp.test(txtNombreEquipo)) {
+        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !/^([A-Z]|[a-z]|\s)+$/.test(txtNombreEquipo)) {
             errorNombreEquipo.css("display", "inline");
             return false;
         } else {

@@ -11,16 +11,15 @@
         var errorEdadJugador = $("#errorEdadJugador");
         var errorDdlEquipos = $("#errorDdlEquipos");
 
-        var exp = "/^([A-Z]|[a-z]|\s)+$/";
 
-        if (txtNombreJugador == null || txtNombreJugador.length == 0 || !exp.test(txtNombreJugador)) {
+        if (txtNombreJugador == null || txtNombreJugador.length == 0 || !/^([A-Z]|[a-z]|\s)+$/.test(txtNombreJugador)) {
             errorNombreJugador.css("display", "inline");
             return false;
         } else {
             errorNombreJugador.css("display", "none");
         }
 
-        if (txtApellidoJugador == null || txtApellidoJugador.length == 0 || !exp.test(txtApellidoJugador)) {
+        if (txtApellidoJugador == null || txtApellidoJugador.length == 0 || !/^([A-Z]|[a-z]|\s)+$/.test(txtApellidoJugador)) {
             errorApellidoJugador.css("display", "inline");
             return false;
         } else {
