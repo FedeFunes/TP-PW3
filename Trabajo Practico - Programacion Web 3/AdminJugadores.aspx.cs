@@ -14,6 +14,12 @@ namespace Trabajo_Practico___Programacion_Web_3
 
         }
 
+        protected void btnEditar_Click(object sender, EventArgs e)
+        {
+            string id = txtIdJugador.Text;
+            Response.Redirect("EditarJugador.aspx?id=" + id);
+        }
+
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
             string idString = txtIdJugador.Text;

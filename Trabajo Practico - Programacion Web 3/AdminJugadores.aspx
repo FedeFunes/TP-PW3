@@ -13,7 +13,7 @@
                     <asp:TextBox ID="txtIdJugador" runat="server" placeholder="ID del jugador" CssClass="form-control"></asp:TextBox>
                 </div>    
 
-                <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-default" />
+                <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-default" OnClick="btnEditar_Click" />
 
                 <!-- No intentes convertir el botón del modal a asp porque no funca
                 <asp:Button ID="btnModalEliminar" runat="server" Text="Eliminar" CssClass="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" />

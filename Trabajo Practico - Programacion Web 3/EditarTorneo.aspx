@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion.master" AutoEventWireup="true" CodeBehind="EditarTorneo.aspx.cs" Inherits="Trabajo_Practico___Programacion_Web_3.EditarTorneo" %>
 <asp:Content ID="contenidoHead" ContentPlaceHolderID="head" runat="server">
-    <script src="js/Atorneos.js"></script>
+    <script src="js/EditarTorneo.js"></script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageContainer" runat="server">
 <!-- Page Content -->
