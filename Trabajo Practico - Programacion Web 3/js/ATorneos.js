@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#PageContainer_PageContainer_btnCrearTorneo").click(function () {
        
-        var txtNombreTorneo = $("#PageContainer_PageContainer_txtNombreTorneo").val
+        var txtNombreTorneo = $("#PageContainer_PageContainer_txtNombreTorneo").val();
         var errorNombreTorneo = $("#errorNombreTorneo");
 
 
