@@ -26,19 +26,34 @@ namespace Trabajo_Practico___Programacion_Web_3
         [WebMethod]
         public List<Equipo> ObtenerEquipos(bool incluirDeTorneosInactivos)
         {
-            List<Equipo> l = new List<Equipo>();
+            List<Equipo> ListEquipos = new List<Equipo>();
+            
             PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+
+            incluirDeTorneosInactivos = true; // a modo prueba
+            
             if (incluirDeTorneosInactivos)
 	        {
-                l = contexto.Equipo.ToList<Equipo>();		        
+                var listadoDeEquipos = contexto.Equipo.ToList<Equipo>();
+
+                foreach (var equipo in listadoDeEquipos)
+                {
+                    Equipo equipoNuevo = new Equipo();
+
+                    equipoNuevo.Nombre = equipo.Nombre;
+                    equipoNuevo.MontoAbonado = equipo.MontoAbonado;
+                    equipoNuevo.IdTorneo = equipo.IdTorneo;
+
+                    ListEquipos.Add(equipoNuevo);
+                }
 	        }
             else
             {
-                var activo = true;
-                l = contexto.Equipo.Where(c => c.Torneo.Activo == activo).ToList<Equipo>();
+              
+
             }
 
-            return l;
+            return ListEquipos;
         }
     }
 }
