@@ -27,7 +27,7 @@ namespace Trabajo_Practico___Programacion_Web_3
             string idString = txtIdTorneo.Text;
             int idInt = Convert.ToInt32(idString);
 
-            PW3_20152C_TP2_TorneosEntities1 contexto = new PW3_20152C_TP2_TorneosEntities1();
+            PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
 
             var equipos = contexto.Equipo.Where(equipo => equipo.IdTorneo == idInt);
 

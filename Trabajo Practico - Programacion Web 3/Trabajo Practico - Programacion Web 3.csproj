@@ -63,21 +63,54 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminEquipos.aspx" />
+    <Content Include="AdminJugadores.aspx" />
     <Content Include="AdminTorneos.aspx" />
     <Content Include="AJugadores.aspx" />
+    <Content Include="bin\Trabajo Practico - Programacion Web 3.dll" />
+    <Content Include="bin\Trabajo Practico - Programacion Web 3.pdb" />
     <Content Include="contacto-resultado.aspx" />
+    <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\bootstrap\bootstrap.min.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EditarEquipo.aspx" />
+    <Content Include="EditarJugador.aspx" />
+    <Content Include="EditarTorneo.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Footer.ascx" />
+    <Content Include="js\AEquipos.js" />
+    <Content Include="js\AJugadores.js" />
+    <Content Include="js\ATorneos.js" />
+    <Content Include="js\bootstrap\bootstrap.js" />
+    <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
     <Content Include="js\obtenerEquipos.js" />
+    <Content Include="js\RContacto.js" />
     <Content Include="ListadoEquipos.ascx" />
     <Content Include="RContacto.aspx" />
     <Content Include="RListadoEquipos.aspx" />
     <Content Include="servicios\Servicio.asmx" />
+    <Content Include="sql\script.sql" />
     <Content Include="Web.config" />
     <Content Include="ATorneos.aspx" />
     <Content Include="AEquipos.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEquipos.aspx.cs">
+      <DependentUpon>AdminEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEquipos.aspx.designer.cs">
+      <DependentUpon>AdminEquipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminJugadores.aspx.cs">
+      <DependentUpon>AdminJugadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminJugadores.aspx.designer.cs">
+      <DependentUpon>AdminJugadores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminTorneos.aspx.cs">
       <DependentUpon>AdminTorneos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,6 +157,27 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditarEquipo.aspx.cs">
+      <DependentUpon>EditarEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarEquipo.aspx.designer.cs">
+      <DependentUpon>EditarEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarJugador.aspx.cs">
+      <DependentUpon>EditarJugador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarJugador.aspx.designer.cs">
+      <DependentUpon>EditarJugador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarTorneo.aspx.cs">
+      <DependentUpon>EditarTorneo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarTorneo.aspx.designer.cs">
+      <DependentUpon>EditarTorneo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Equipo.cs">
       <DependentUpon>Datos.tt</DependentUpon>
     </Compile>
@@ -151,6 +205,9 @@
     <Compile Include="ListadoEquipos.ascx.designer.cs">
       <DependentUpon>ListadoEquipos.ascx</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="RContacto.aspx.cs">
       <DependentUpon>RContacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +281,10 @@
       <DependentUpon>Datos.edmx</DependentUpon>
       <LastGenOutput>Datos.cs</LastGenOutput>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
