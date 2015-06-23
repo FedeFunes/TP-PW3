@@ -1,10 +1,12 @@
-﻿//$(document).ready(function () {
-//    $("#btnListar").click(function(){
-//        var inactivos = $("#cbInactivos").is(':checked');
+﻿$(document).ready(function () {
+    ObtenerEquipos();
 
-//        ObtenerEquipos(inactivos);
-//    });
-//});
+    //$("#btnListar").click(function(){
+    //    var inactivos = $("#cbInactivos").is(':checked');
+
+    //    ObtenerEquipos(inactivos);
+    //});
+});
 
 function ObtenerEquipos() {
     var inactivos = $("#cbInactivos").is(':checked');
@@ -14,7 +16,6 @@ function ObtenerEquipos() {
         type: "POST",
         url: "/servicios/Servicio.asmx/ObtenerEquipos",
         data: "{incluirDeTorneosInactivos: " + inactivos + "}",
-        //data: "incluirDeTorneosInactivos=" + inactivos,
         async: true, //por defecto es true
         contentType: "application/json; charset=utf-8",
         dataType: "json",
