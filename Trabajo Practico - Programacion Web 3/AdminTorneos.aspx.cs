@@ -24,23 +24,36 @@ namespace Trabajo_Practico___Programacion_Web_3
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            string idString = txtIdTorneo.Text;
-            int idInt = Convert.ToInt32(idString);
 
-            PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+            try
+            {
+                string idString = txtIdTorneo.Text;
+                int idInt = Convert.ToInt32(idString);
 
-            var equipos = contexto.Equipo.Where(equipo => equipo.IdTorneo == idInt);
+                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
 
-            foreach (var equipo in equipos)
-                equipo.IdTorneo = equipo.IdTorneo = null;
+                var equipos = contexto.Equipo.Where(equipo => equipo.IdTorneo == idInt);
 
-            contexto.SaveChanges();
+                foreach (var equipo in equipos)
+                    equipo.IdTorneo = equipo.IdTorneo = null;
 
-            var torneoAEliminar = contexto.Torneo.Where(torneo => torneo.Id == idInt).Single();
+                contexto.SaveChanges();
 
-            contexto.Torneo.Remove(torneoAEliminar);	// Para el Framework 4.1 o superior sino DeleteObject(do);
+                var torneoAEliminar = contexto.Torneo.Where(torneo => torneo.Id == idInt).Single();
 
-            contexto.SaveChanges();
+                contexto.Torneo.Remove(torneoAEliminar);	// Para el Framework 4.1 o superior sino DeleteObject(do);
+
+                contexto.SaveChanges();
+
+                lblExitoso.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                lblError.Visible = true;
+                lblError.Text += ex.Message;
+                throw;
+            }
+
         }
     }
 }

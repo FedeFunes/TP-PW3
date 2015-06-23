@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion.master" AutoEventWireup="true" CodeBehind="AdminTorneos.aspx.cs" Inherits="Trabajo_Practico___Programacion_Web_3.AdminTorneos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="js/AdminTorneos.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageContainer" runat="server">
 <!-- Page Content -->
@@ -10,8 +11,10 @@
                 
                 <div class="form-group">
                     <label for="txtIdTorneo">Ingrese ID del torneo y elija que desea hacer</label>
-                    <asp:TextBox ID="txtIdTorneo" runat="server" placeholder="ID del torneo" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtIdTorneo" runat="server" placeholder="ID del torneo" CssClass="form-control"></asp:TextBox>                    
                 </div>
+                
+                <span class="errorForm text-danger" id="errorIdTorneo">Error: Campo vacio o inválido (deben ser solo numeros).</span> 
 
                 <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-default" OnClick="btnEditar_Click" />
                     
@@ -19,8 +22,13 @@
                 <asp:Button ID="btnModalEliminar" runat="server" Text="Eliminar" CssClass="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" />
                 -->
                     
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Eliminar</button>
-	                
+                <button id="btnEliminarModal" type="button" class="btn btn-default">Eliminar</button>
+	            
+                <div class="form-group">
+                    <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>
+                    <asp:Label ID="lblError" runat="server" Text="Hubo un error:" class="errorForm text-danger" Visible="false" EnableViewState="false"></asp:Label>
+                </div>
+                   
                 <!-- Ejemplo ayuda: http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
                 <!-- Modal -->
 	            <div class="modal fade" id="myModal" role="dialog">
