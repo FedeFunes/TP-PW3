@@ -35,7 +35,6 @@ namespace Trabajo_Practico___Programacion_Web_3
                     contexto.Jugador.Remove(jugador);
 
                 contexto.SaveChanges();
-
             
                 var equipo = contexto.Equipo.Where(eq => eq.Id == idInt).Single();
 
@@ -48,7 +47,6 @@ namespace Trabajo_Practico___Programacion_Web_3
                 Response.Redirect("Error.aspx");
                 //throw;
             }
-
         }
     }
 }

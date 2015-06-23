@@ -49,7 +49,6 @@ namespace Trabajo_Practico___Programacion_Web_3
                 Response.Redirect("Error.aspx");
                 //throw;
             }
-
         }
     }
 }
