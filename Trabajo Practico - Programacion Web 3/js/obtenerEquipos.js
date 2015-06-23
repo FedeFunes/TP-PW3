@@ -1,14 +1,14 @@
-﻿$(document).ready(function () {
-    ObtenerEquipos(false);
+﻿//$(document).ready(function () {
+//    $("#btnListar").click(function(){
+//        var inactivos = $("#cbInactivos").is(':checked');
 
-    $("#btnListar").click(function(){
-        var inactivos = $("#cbInactivos").is(':checked');
+//        ObtenerEquipos(inactivos);
+//    });
+//});
 
-        ObtenerEquipos(inactivos);
-    });
-});
-
-function ObtenerEquipos(inactivos) {
+function ObtenerEquipos() {
+    var inactivos = $("#cbInactivos").is(':checked');
+    
     $.support.cors = true;
     $.ajax({
         type: "POST",
@@ -27,19 +27,16 @@ function ObtenerEquipos(inactivos) {
         },
         error: function (xhr, status, error) {//cualquier error del lado servidor sale por este evento
             debugger;
-            alert(xhr.responseText);
+            alert(xhr.responseText + error);
         }
     });
 }
 
 function vaciarListado() {
-    alert("Entra en vaciarListado");
     $('#tbListadoEquipos').find('li').remove().end();
 }
 
 function cargarListado(listado) {
-    alert("Entra en cargarListado");
-
     $.each(listado, function (index, obj) {
         $('#tbListadoEquipos').append(
             $('<li></li>').html(obj.Nombre)

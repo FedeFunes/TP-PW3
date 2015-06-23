@@ -21,6 +21,7 @@ namespace Trabajo_Practico___Programacion_Web_3
         public List<Equipo> ObtenerEquipos(bool incluirDeTorneosInactivos)
         {
             List<Equipo> ListEquipos = new List<Equipo>();
+            List<Equipo> listadoDeEquipos = new List<Equipo>();
             
             PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
 
@@ -28,11 +29,33 @@ namespace Trabajo_Practico___Programacion_Web_3
             
             if (incluirDeTorneosInactivos)
 	        {
-                ListEquipos = contexto.Equipo.ToList<Equipo>();
+                listadoDeEquipos = contexto.Equipo.ToList<Equipo>();
+
+                foreach (Equipo equipo in listadoDeEquipos)
+                {
+                    Equipo equipoNuevo = new Equipo();
+
+                    equipoNuevo.Nombre = equipo.Nombre;
+                    equipoNuevo.MontoAbonado = equipo.MontoAbonado;
+                    equipoNuevo.IdTorneo = equipo.IdTorneo;
+
+                    ListEquipos.Add(equipoNuevo);
+                }
 	        }
             else
             {
-                ListEquipos = contexto.Equipo.Where(c => c.Torneo.Activo == true).ToList<Equipo>();
+                listadoDeEquipos = contexto.Equipo.Where(c => c.Torneo.Activo == true).ToList<Equipo>();
+
+                foreach (Equipo equipo in listadoDeEquipos)
+                {
+                    Equipo equipoNuevo = new Equipo();
+
+                    equipoNuevo.Nombre = equipo.Nombre;
+                    equipoNuevo.MontoAbonado = equipo.MontoAbonado;
+                    equipoNuevo.IdTorneo = equipo.IdTorneo;
+
+                    ListEquipos.Add(equipoNuevo);
+                }
             }
 
             return ListEquipos;
