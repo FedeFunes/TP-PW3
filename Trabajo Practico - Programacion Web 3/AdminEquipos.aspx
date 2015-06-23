@@ -11,7 +11,12 @@
                 <div class="form-group">
                     <label for="txtIdEquipo">Ingrese ID del equipo y elija que desea hacer</label>
                     <asp:TextBox ID="txtIdEquipo" runat="server" placeholder="ID del equipo" CssClass="form-control"></asp:TextBox>
-                </div>    
+                </div>
+                
+                <div class="form-group">
+                    <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false"></asp:Label>
+                    <asp:Label ID="lblError" runat="server" Text="Hubo un error:" class="errorForm text-danger" Visible="false"></asp:Label>
+                </div>
                     
                 <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-default" OnClick="btnEditar_Click" />
                     

@@ -22,24 +22,33 @@ namespace Trabajo_Practico___Programacion_Web_3
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            string idString = txtIdEquipo.Text;
-            int idInt = Convert.ToInt32(idString);
+            try
+            {
+                string idString = txtIdEquipo.Text;
+                int idInt = Convert.ToInt32(idString);
 
-            PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
 
-            var jugadores = contexto.Jugador.Where(jugador => jugador.IdEquipo == idInt);
+                var jugadores = contexto.Jugador.Where(jugador => jugador.IdEquipo == idInt);
 
-            foreach (var jugador in jugadores)
-                contexto.Jugador.Remove(jugador);
+                foreach (var jugador in jugadores)
+                    contexto.Jugador.Remove(jugador);
 
-            contexto.SaveChanges();
+                contexto.SaveChanges();
 
             
-            var equipo = contexto.Equipo.Where(eq => eq.Id == idInt).Single();
+                var equipo = contexto.Equipo.Where(eq => eq.Id == idInt).Single();
 
-            contexto.Equipo.Remove(equipo);	// Para el Framework 4.1 o superior sino DeleteObject(do);
+                contexto.Equipo.Remove(equipo);	// Para el Framework 4.1 o superior sino DeleteObject(do);
 
-            contexto.SaveChanges();
+                contexto.SaveChanges();
+            }
+            catch (Exception)
+            {
+                Response.Redirect("Error.aspx");
+                //throw;
+            }
+
         }
     }
 }

@@ -77,6 +77,7 @@
     <Content Include="EditarEquipo.aspx" />
     <Content Include="EditarJugador.aspx" />
     <Content Include="EditarTorneo.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Footer.ascx" />
     <Content Include="js\AEquipos.js" />
@@ -84,6 +85,9 @@
     <Content Include="js\ATorneos.js" />
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\EditarEquipo.js" />
+    <Content Include="js\EditarJugador.js" />
+    <Content Include="js\EditarTorneo.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\obtenerEquipos.js" />
     <Content Include="js\RContacto.js" />
@@ -180,6 +184,13 @@
     </Compile>
     <Compile Include="Equipo.cs">
       <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>

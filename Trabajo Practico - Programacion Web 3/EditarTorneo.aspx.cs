@@ -51,11 +51,10 @@ namespace Trabajo_Practico___Programacion_Web_3
 
                 lblExitoso.Visible = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                lblError.Visible = true;
-                lblError.Text += ex.Message;
-                throw;
+                Response.Redirect("Error.aspx");
+                //throw;
             }
 
         }
