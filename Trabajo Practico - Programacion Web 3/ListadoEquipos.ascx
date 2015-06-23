@@ -10,7 +10,8 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="checkbox">
-                <asp:CheckBox ID="cbInactivos" runat="server" Text="Listar inactivos también" />
+                <input type="checkbox" id="cbInactivos" name="inactivos" value="inactivos" />
+                <label for="cbInactivos">Listar inactivos también</label>
             </div>
             <button id="btnListar" class="btn btn-default">Listar</button>
         </div>

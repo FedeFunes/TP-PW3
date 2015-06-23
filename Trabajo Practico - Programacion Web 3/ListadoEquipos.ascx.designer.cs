@@ -11,14 +11,5 @@ namespace Trabajo_Practico___Programacion_Web_3 {
     
     
     public partial class ListadoEquipos {
-        
-        /// <summary>
-        /// Control cbInactivos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbInactivos;
     }
 }

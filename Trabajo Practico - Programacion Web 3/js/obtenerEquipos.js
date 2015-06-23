@@ -1,15 +1,20 @@
-﻿$(document).ready(function(){
+﻿$(document).ready(function () {
+    ObtenerEquipos(false);
+
     $("#btnListar").click(function(){
         var inactivos = $("#cbInactivos").is(':checked');
+
         ObtenerEquipos(inactivos);
     });
 });
 
 function ObtenerEquipos(inactivos) {
+    $.support.cors = true;
     $.ajax({
         type: "POST",
-        url: "/servicios/servicio.asmx/ObtenerEquipos",
+        url: "/servicios/Servicio.asmx/ObtenerEquipos",
         data: "{incluirDeTorneosInactivos: " + inactivos + "}",
+        //data: "incluirDeTorneosInactivos=" + inactivos,
         async: true, //por defecto es true
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -22,20 +27,22 @@ function ObtenerEquipos(inactivos) {
         },
         error: function (xhr, status, error) {//cualquier error del lado servidor sale por este evento
             debugger;
-            alert(xhr.responseText + "aaaaaaaaaa");
+            alert(xhr.responseText);
         }
     });
+}
 
-    function vaciarListado() {
-        $('#tbListadoEquipos').find('tr').remove().end();
-    }
+function vaciarListado() {
+    alert("Entra en vaciarListado");
+    $('#tbListadoEquipos').find('li').remove().end();
+}
 
-    function cargarListado(listado) {
+function cargarListado(listado) {
+    alert("Entra en cargarListado");
 
-        $.each(listado, function (index, obj) {
-            $('#tbListadoEquipos').append(
-                            $('<li></li>').html(obj.Nombre)
-                        );
-        });
-    }
+    $.each(listado, function (index, obj) {
+        $('#tbListadoEquipos').append(
+            $('<li></li>').html(obj.Nombre)
+        );
+    });
 }

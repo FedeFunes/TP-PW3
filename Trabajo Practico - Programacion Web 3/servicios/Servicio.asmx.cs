@@ -16,41 +16,23 @@ namespace Trabajo_Practico___Programacion_Web_3
     [System.Web.Script.Services.ScriptService]
     public class Servicio : System.Web.Services.WebService
     {
-
         [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hola a todos";
-        }
-
-        [WebMethod]
+        [System.Web.Script.Services.ScriptMethod(ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
         public List<Equipo> ObtenerEquipos(bool incluirDeTorneosInactivos)
         {
             List<Equipo> ListEquipos = new List<Equipo>();
             
             PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
 
-            incluirDeTorneosInactivos = true; // a modo prueba
+            //incluirDeTorneosInactivos = true; // a modo prueba
             
             if (incluirDeTorneosInactivos)
 	        {
-                var listadoDeEquipos = contexto.Equipo.ToList<Equipo>();
-
-                foreach (var equipo in listadoDeEquipos)
-                {
-                    Equipo equipoNuevo = new Equipo();
-
-                    equipoNuevo.Nombre = equipo.Nombre;
-                    equipoNuevo.MontoAbonado = equipo.MontoAbonado;
-                    equipoNuevo.IdTorneo = equipo.IdTorneo;
-
-                    ListEquipos.Add(equipoNuevo);
-                }
+                ListEquipos = contexto.Equipo.ToList<Equipo>();
 	        }
             else
             {
-              
-
+                ListEquipos = contexto.Equipo.Where(c => c.Torneo.Activo == true).ToList<Equipo>();
             }
 
             return ListEquipos;
