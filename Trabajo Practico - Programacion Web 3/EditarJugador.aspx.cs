@@ -29,7 +29,7 @@ namespace Trabajo_Practico___Programacion_Web_3
                 }
                 catch (Exception)
                 {
-                    Response.Redirect("AdminJugadores.aspx");
+                    Response.Redirect("Error.aspx");
                     throw;
                 }
 
@@ -49,24 +49,32 @@ namespace Trabajo_Practico___Programacion_Web_3
         {
             try
             {
-                string nombre = txtNombreJugador.Text;
-                string apellido = txtApellidoJugador.Text;
-                int edad = int.Parse(txtEdadJugador.Text);
-                int idEquipo = int.Parse(ddlEquipos.SelectedValue);
-                int idJugador = int.Parse(Request.QueryString["id"]);
+                if (IsValid)
+                {
+                    string nombre = txtNombreJugador.Text;
+                    string apellido = txtApellidoJugador.Text;
+                    int edad = int.Parse(txtEdadJugador.Text);
+                    int idEquipo = int.Parse(ddlEquipos.SelectedValue);
+                    int idJugador = int.Parse(Request.QueryString["id"]);
 
-                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
-                Jugador j = contexto.Jugador.Where(c => c.Id == idJugador).First();
+                    PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                    Jugador j = contexto.Jugador.Where(c => c.Id == idJugador).First();
 
-                j.Nombre = nombre;
-                j.Apellido = apellido;
-                j.Edad = edad;
-                j.IdEquipo = idEquipo;
+                    j.Nombre = nombre;
+                    j.Apellido = apellido;
+                    j.Edad = edad;
+                    j.IdEquipo = idEquipo;
 
-                contexto.Entry(j).State = System.Data.EntityState.Modified;
-                contexto.SaveChanges();
+                    contexto.Entry(j).State = System.Data.EntityState.Modified;
+                    contexto.SaveChanges();
 
-                lblExitoso.Visible = true;
+                    lblExitoso.Visible = true;                    
+                }
+                else
+                {
+                    lblExitoso.Visible = false;
+                    lblError.Visible = true;
+                }
             }
             catch (Exception)
             {

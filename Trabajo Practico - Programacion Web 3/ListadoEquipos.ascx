@@ -10,10 +10,10 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="checkbox">
-                <input type="checkbox" id="cbInactivos" name="inactivos" value="inactivos" />
+                <input type="checkbox" id="cbInactivos" name="inactivos" value="inactivos" onchange="ObtenerEquipos();" />
                 <label for="cbInactivos">Listar inactivos también</label>
             </div>
-            <button id="btnListar" class="btn btn-default" onclick="ObtenerEquipos();">Listar</button>
+            <%--<button id="btnListar" class="btn btn-default" onclick="ObtenerEquipos();">Listar</button>--%>
         </div>
     </div>
     <!-- /.row -->

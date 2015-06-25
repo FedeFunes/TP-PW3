@@ -28,7 +28,7 @@ namespace Trabajo_Practico___Programacion_Web_3
                 }
                 catch (Exception)
                 {
-                    Response.Redirect("AdminEquipos.aspx");
+                    Response.Redirect("Error.aspx");
                     throw;
                 }
 
@@ -54,23 +54,32 @@ namespace Trabajo_Practico___Programacion_Web_3
         {
             try
             {
-                string nombre = txtNombreEquipo.Text;
-                int monto = int.Parse(txtMontoAbonado.Text);
-                int idTorneo = int.Parse(ddlTorneos.SelectedValue);
-                int idEquipo = int.Parse(Request.QueryString["id"]);
+                if (IsValid)
+                {
+                    string nombre = txtNombreEquipo.Text;
+                    int monto = int.Parse(txtMontoAbonado.Text);
+                    int idTorneo = int.Parse(ddlTorneos.SelectedValue);
+                    int idEquipo = int.Parse(Request.QueryString["id"]);
 
-                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
-                Equipo eq = contexto.Equipo.Where(c => c.Id == idEquipo).First();
+                    PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                    Equipo eq = contexto.Equipo.Where(c => c.Id == idEquipo).First();
 
-                eq.Nombre = nombre;
-                if (idTorneo == 0) { eq.IdTorneo = null; }
-                else { eq.IdTorneo = idTorneo; }
-                eq.MontoAbonado = monto;
+                    eq.Nombre = nombre;
+                    if (idTorneo == 0) { eq.IdTorneo = null; }
+                    else { eq.IdTorneo = idTorneo; }
+                    eq.MontoAbonado = monto;
 
-                contexto.Entry(eq).State = System.Data.EntityState.Modified;
-                contexto.SaveChanges();
+                    contexto.Entry(eq).State = System.Data.EntityState.Modified;
+                    contexto.SaveChanges();
 
-                lblExitoso.Visible = true;
+                    lblExitoso.Visible = true;
+                    lblError.Visible = false;                 
+                }
+                else
+                {
+                    lblExitoso.Visible = false;
+                    lblError.Visible = true;
+                }
             }
             catch (Exception)
             {

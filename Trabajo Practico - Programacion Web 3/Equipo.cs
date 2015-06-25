@@ -11,7 +11,7 @@ namespace Trabajo_Practico___Programacion_Web_3
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Equipo
     {
         public Equipo()
@@ -26,11 +26,5 @@ namespace Trabajo_Practico___Programacion_Web_3
     
         public virtual Torneo Torneo { get; set; }
         public virtual ICollection<Jugador> Jugador { get; set; }
-
-        //public string ToJSON()
-        //{
-        //    System.Web.Script.Serialization.JavaScriptSerializer jsonSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-        //    return jsonSerializer.Serialize(this);
-        //}
     }
 }

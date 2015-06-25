@@ -22,7 +22,7 @@
                 <asp:Button ID="btnModalEliminar" runat="server" Text="Eliminar" CssClass="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" />
                 -->
                     
-                <button id="btnEliminarModal" type="button" class="btn btn-default">Eliminar</button>
+                <button id="btnEliminarModal" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Eliminar</button>
 	            
                 <div class="form-group">
                     <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>

@@ -26,7 +26,7 @@ namespace Trabajo_Practico___Programacion_Web_3
                 }
                 catch (Exception)
                 {
-                    Response.Redirect("AdminTorneos.aspx");
+                    Response.Redirect("Error.aspx");
                     throw;
                 }
             }
@@ -36,20 +36,29 @@ namespace Trabajo_Practico___Programacion_Web_3
         {
             try
             {
-                string nombre = txtNombreTorneo.Text;
-                bool activo = cbActivoTorneo.Checked;
-                int idTorneo = int.Parse(Request.QueryString["id"]);
+                if (IsValid)
+                {
+                    string nombre = txtNombreTorneo.Text;
+                    bool activo = cbActivoTorneo.Checked;
+                    int idTorneo = int.Parse(Request.QueryString["id"]);
 
-                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
-                Torneo t = contexto.Torneo.Where(c => c.Id == idTorneo).First();
+                    PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                    Torneo t = contexto.Torneo.Where(c => c.Id == idTorneo).First();
 
-                t.Nombre = nombre;
-                t.Activo = activo;
+                    t.Nombre = nombre;
+                    t.Activo = activo;
 
-                contexto.Entry(t).State = System.Data.EntityState.Modified;
-                contexto.SaveChanges();
+                    contexto.Entry(t).State = System.Data.EntityState.Modified;
+                    contexto.SaveChanges();
 
-                lblExitoso.Visible = true;
+                    lblExitoso.Visible = true;
+                    lblError.Visible = false;                  
+                }
+                else
+                {
+                    lblExitoso.Visible = false;  
+                    lblError.Visible = true;    
+                }
             }
             catch (Exception)
             {
