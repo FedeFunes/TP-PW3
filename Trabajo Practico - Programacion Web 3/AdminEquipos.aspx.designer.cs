@@ -22,6 +22,42 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtIdEquipo;
         
         /// <summary>
+        /// Control RFVtxtIdEquipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVtxtIdEquipo;
+        
+        /// <summary>
+        /// Control REVtxtIdEquipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVtxtIdEquipo;
+        
+        /// <summary>
+        /// Control VSAdminEquipos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VSAdminEquipos;
+        
+        /// <summary>
+        /// Control lblExitoso.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblExitoso;
+        
+        /// <summary>
         /// Control btnEditar.
         /// </summary>
         /// <remarks>
@@ -29,15 +65,6 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditar;
-        
-        /// <summary>
-        /// Control btnModalEliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModalEliminar;
         
         /// <summary>
         /// Control Button1.

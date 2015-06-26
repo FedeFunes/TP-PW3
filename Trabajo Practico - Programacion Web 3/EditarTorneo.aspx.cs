@@ -51,13 +51,11 @@ namespace Trabajo_Practico___Programacion_Web_3
                     contexto.Entry(t).State = System.Data.EntityState.Modified;
                     contexto.SaveChanges();
 
-                    lblExitoso.Visible = true;
-                    lblError.Visible = false;                  
+                    lblExitoso.Visible = true;              
                 }
                 else
                 {
                     lblExitoso.Visible = false;  
-                    lblError.Visible = true;    
                 }
             }
             catch (Exception)

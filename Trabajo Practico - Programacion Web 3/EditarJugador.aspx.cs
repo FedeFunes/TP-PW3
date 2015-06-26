@@ -73,7 +73,6 @@ namespace Trabajo_Practico___Programacion_Web_3
                 else
                 {
                     lblExitoso.Visible = false;
-                    lblError.Visible = true;
                 }
             }
             catch (Exception)

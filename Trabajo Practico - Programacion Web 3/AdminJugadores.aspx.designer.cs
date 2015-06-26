@@ -22,22 +22,31 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.TextBox txtIdJugador;
         
         /// <summary>
-        /// Control btnEditar.
+        /// Control RFVtxtIdJugador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditar;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVtxtIdJugador;
         
         /// <summary>
-        /// Control btnModalEliminar.
+        /// Control REVtxtIdJugador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModalEliminar;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVtxtIdJugador;
+        
+        /// <summary>
+        /// Control VSAdminJugadores.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VSAdminJugadores;
         
         /// <summary>
         /// Control lblExitoso.
@@ -49,13 +58,13 @@ namespace Trabajo_Practico___Programacion_Web_3 {
         protected global::System.Web.UI.WebControls.Label lblExitoso;
         
         /// <summary>
-        /// Control lblError.
+        /// Control btnEditar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Button btnEditar;
         
         /// <summary>
         /// Control Button1.

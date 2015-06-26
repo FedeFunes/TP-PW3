@@ -16,37 +16,51 @@ namespace Trabajo_Practico___Programacion_Web_3
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            string id = txtIdEquipo.Text;
-            Response.Redirect("EditarEquipo.aspx?id=" + id);
+
+            if (IsValid)
+            {
+                string id = txtIdEquipo.Text;
+                Response.Redirect("EditarEquipo.aspx?id=" + id);
+            } 
+            
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string idString = txtIdEquipo.Text;
-                int idInt = Convert.ToInt32(idString);
-
-                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
-
-                var jugadores = contexto.Jugador.Where(jugador => jugador.IdEquipo == idInt);
-
-                foreach (var jugador in jugadores)
-                    contexto.Jugador.Remove(jugador);
-
-                contexto.SaveChanges();
             
-                var equipo = contexto.Equipo.Where(eq => eq.Id == idInt).Single();
-
-                contexto.Equipo.Remove(equipo);	// Para el Framework 4.1 o superior sino DeleteObject(do);
-
-                contexto.SaveChanges();
-            }
-            catch (Exception)
+            if (IsValid)
             {
-                Response.Redirect("Error.aspx");
-                //throw;
+                try
+                {
+                    string idString = txtIdEquipo.Text;
+                    int idInt = Convert.ToInt32(idString);
+
+                    PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+
+                    var jugadores = contexto.Jugador.Where(jugador => jugador.IdEquipo == idInt);
+
+                    foreach (var jugador in jugadores)
+                        contexto.Jugador.Remove(jugador);
+
+                    contexto.SaveChanges();
+
+                    var equipo = contexto.Equipo.Where(eq => eq.Id == idInt).Single();
+
+                    contexto.Equipo.Remove(equipo);	// Para el Framework 4.1 o superior sino DeleteObject(do);
+
+                    contexto.SaveChanges();
+
+                    txtIdEquipo.Text = "";
+
+                    lblExitoso.Visible = true;  
+                }
+                catch (Exception)
+                {
+                    Response.Redirect("Error.aspx");
+                    //throw;
+                }
             }
+
         }
     }
 }

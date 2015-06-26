@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion.master" AutoEventWireup="true" CodeBehind="AdminJugadores.aspx.cs" Inherits="Trabajo_Practico___Programacion_Web_3.AdminJugadores" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="js/AdminJugadores.js"></script>
+    <script src="js/AdminJugadores.js"></script> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageContainer" runat="server">
 <!-- Page Content -->
@@ -12,23 +12,21 @@
                 <div class="form-group">
                     <label for="txtIdJugador">Ingrese ID del jugador y elija que desea hacer</label>
                     <asp:TextBox ID="txtIdJugador" runat="server" placeholder="ID del jugador" CssClass="form-control"></asp:TextBox>
-                </div>    
+                    <span class="errorForm text-danger" id="errorIdJugador">Error: Campo vacio o inválido (deben ser solo numeros y hasta 5 caracteres max).</span>
+                    <asp:RequiredFieldValidator ID="RFVtxtIdJugador" runat="server" ErrorMessage="No puede estar vacío." Text="(*)" ControlToValidate="txtIdJugador" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="REVtxtIdJugador" runat="server" ErrorMessage="Campo inválido (deben ser solo numeros y hasta 5 caracteres max)." Text="(*)" ValidationExpression="\d{1,5}" ControlToValidate="txtIdJugador" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>   
+                </div>     
+                
+                <asp:ValidationSummary ID="VSAdminJugadores" runat="server" HeaderText="Errores en formulario:" />
 
-                <span class="errorForm text-danger" id="errorIdJugador">Error: Campo vacio o inválido (deben ser solo numeros).</span> 
+                 <div class="form-group">
+                    <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>
+                </div>
 
                 <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-default" OnClick="btnEditar_Click" />
-
-                <!-- No intentes convertir el botón del modal a asp porque no funca
-                <asp:Button ID="btnModalEliminar" runat="server" Text="Eliminar" CssClass="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" />
-                -->
-
+                
                 <button id="btnEliminarModal" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Eliminar</button>
-	            
-                <div class="form-group">
-                    <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>
-                    <asp:Label ID="lblError" runat="server" Text="Hubo un error:" class="errorForm text-danger" Visible="false" EnableViewState="false"></asp:Label>
-                </div>
-                 
+	             
                 <!-- Ejemplo ayuda: http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
                 <!-- Modal -->
 	            <div class="modal fade" id="myModal" role="dialog">

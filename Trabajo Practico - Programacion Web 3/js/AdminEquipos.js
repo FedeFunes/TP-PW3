@@ -1,10 +1,10 @@
 ﻿$(document).ready(function () {
-    $("#PageContainer_PageContainer_btnEditar").click(function () {
+    $("#ctl00_ctl00_PageContainer_PageContainer_btnEditar").click(function () {
 
-        var txtIdEquipo = $("#PageContainer_PageContainer_txtIdEquipo").val();
+        var txtIdEquipo = $("#ctl00_ctl00_PageContainer_PageContainer_txtIdEquipo").val();
         var errorIdEquipo = $("#errorIdEquipo");
 
-        if (txtIdEquipo == null || txtIdEquipo.length == 0 || !/^\d+$/.test(txtIdEquipo)) {
+        if (txtIdEquipo == null || txtIdEquipo.length == 0 || !/^\d{1,5}$/.test(txtIdEquipo)) {
             errorIdEquipo.css("display", "inline");
             return false;
         } else {
@@ -14,11 +14,10 @@
 
     $("#btnEliminarModal").click(function () {
 
-        var txtIdEquipo = $("#PageContainer_PageContainer_txtIdEquipo").val();
+        var txtIdEquipo = $("#ctl00_ctl00_PageContainer_PageContainer_txtIdEquipo").val();
         var errorIdEquipo = $("#errorIdEquipo");
 
-
-        if (txtIdEquipo == null || txtIdEquipo.length == 0 || !/^\d+$/.test(txtIdEquipo)) {
+        if (txtIdEquipo == null || txtIdEquipo.length == 0 || !/^\d{1,5}$/.test(txtIdEquipo)) {
             errorIdEquipo.css("display", "inline");
             return false;
         } else {

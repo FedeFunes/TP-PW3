@@ -16,30 +16,41 @@ namespace Trabajo_Practico___Programacion_Web_3
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            string id = txtIdJugador.Text;
-            Response.Redirect("EditarJugador.aspx?id=" + id);
+            if (IsValid)
+            {
+                string id = txtIdJugador.Text;
+                Response.Redirect("EditarJugador.aspx?id=" + id);
+            }
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (IsValid)
             {
-                string idString = txtIdJugador.Text;
-                int idInt = Convert.ToInt32(idString);
+                try
+                {
+                    string idString = txtIdJugador.Text;
+                    int idInt = Convert.ToInt32(idString);
 
-                PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
+                    PW3_20152C_TP2_TorneosEntities contexto = new PW3_20152C_TP2_TorneosEntities();
 
-                var jugador = contexto.Jugador.Where(j => j.Id == idInt).Single();
+                    var jugador = contexto.Jugador.Where(j => j.Id == idInt).Single();
 
-                contexto.Jugador.Remove(jugador); // Para el Framework 4.1 o superior sino DeleteObject(do);
+                    contexto.Jugador.Remove(jugador); // Para el Framework 4.1 o superior sino DeleteObject(do);
 
-                contexto.SaveChanges();
+                    contexto.SaveChanges();
+
+                    txtIdJugador.Text = "";
+
+                    lblExitoso.Visible = true;       
+                }
+                catch (Exception)
+                {
+                    Response.Redirect("Error.aspx");
+                    //throw;
+                }
             }
-            catch (Exception)
-            {
-                Response.Redirect("Error.aspx");
-                //throw;
-            }
+
         }
     }
 }

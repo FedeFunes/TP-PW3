@@ -11,15 +11,15 @@
                 <div class="form-group">
                     <label for="txtNombreEquipo">Nombre</label>
                     <asp:TextBox ID="txtNombreEquipo" runat="server" CssClass="form-control" placeholder="Ingrese nombre del equipo"></asp:TextBox>
+                    
                     <asp:RequiredFieldValidator ID="ValidaNombreEquipo1" runat="server" ErrorMessage="Campo Nombre: No puede estar vacío." Text="(*)" ControlToValidate="txtNombreEquipo" Display="Dynamic" EnableClientScript="false"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="ValidaNombreEquipo2" runat="server" ErrorMessage="Campo Nombre: Solo letras." Text="(*)" ValidationExpression="([A-Z]|[a-z]|\s)+" ControlToValidate="txtNombreEquipo" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
+                    
                     <span class="errorForm text-danger" id="errorNombreEquipo">Error: Campo vacio o inválido (deben ser solo letras).</span>
                 </div>
                          
                 <div class="form-group">
                     <asp:DropDownList ID="ddlTorneos" runat="server" CssClass="form-control"></asp:DropDownList>
-                    <%--<asp:RegularExpressionValidator ID="ValidaTorneos" runat="server" ErrorMessage="Campo Torneo: Elija un torneo." Text="(*)" ValidationExpression="^Torneo\d$" ControlToValidate="ddlTorneos" Display="Dynamic" EnableClientScript="false"></asp:RegularExpressionValidator>
-                    <span class="errorForm text-danger" id="errorDdlTorneos">Error: Elija un torneo.</span>--%>
                 </div>
 
                 <div class="form-group">

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#PageContainer_PageContainer_btnEditarTorneo").click(function () {
+    $("#ctl00_ctl00_PageContainer_PageContainer_btnEditarTorneo").click(function () {
        
-        var txtNombreTorneo = $("#PageContainer_PageContainer_txtNombreTorneo").val();
+        var txtNombreTorneo = $("#ctl00_ctl00_PageContainer_PageContainer_txtNombreTorneo").val();
         var errorNombreTorneo = $("#errorNombreTorneo");
 
 

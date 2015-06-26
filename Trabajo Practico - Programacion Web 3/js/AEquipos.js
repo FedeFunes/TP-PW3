@@ -1,9 +1,10 @@
 ﻿$(document).ready(function () {
-    $("#PageContainer_PageContainer_btnCrearEquipo").click(function () {
 
-        var txtNombreEquipo = $("#PageContainer_PageContainer_txtNombreEquipo").val();
-        var ddlTorneos = $("#PageContainer_PageContainer_ddlTorneos").val();
-        var txtMontoAbonado = $("#PageContainer_PageContainer_txtMontoAbonado").val();
+    $("#ctl00_ctl00_PageContainer_PageContainer_btnCrearEquipo").click(function () {
+
+        var txtNombreEquipo = $("#ctl00_ctl00_PageContainer_PageContainer_txtNombreEquipo").val();
+        var ddlTorneos = $("#ctl00_ctl00_PageContainer_PageContainer_ddlTorneos").val();
+        var txtMontoAbonado = $("#ctl00_ctl00_PageContainer_PageContainer_txtMontoAbonado").val();
 
         var errorNombreEquipo = $("#errorNombreEquipo");
         var errorDdlTorneos = $("#errorDdlTorneos");

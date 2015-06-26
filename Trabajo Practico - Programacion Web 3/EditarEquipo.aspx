@@ -33,7 +33,6 @@
 
                 <div class="form-group">
                     <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>
-                    <asp:Label ID="lblError" runat="server" Text="Hubo un error:" class="errorForm text-danger" Visible="false" EnableViewState="false"></asp:Label>
                 </div>
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />

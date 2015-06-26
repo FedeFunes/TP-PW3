@@ -1,10 +1,10 @@
 ﻿$(document).ready(function () {
-    $("#PageContainer_PageContainer_btnEditarJugador").click(function () {
+    $("#ctl00_ctl00_PageContainer_PageContainer_btnEditarJugador").click(function () {
 
-        var txtNombreJugador = $("#PageContainer_PageContainer_txtNombreJugador").val();
-        var txtApellidoJugador = $("#PageContainer_PageContainer_txtApellidoJugador").val();
-        var txtEdadJugador = $("#PageContainer_PageContainer_txtEdadJugador").val();
-        var ddlEquipos = $("#PageContainer_PageContainer_ddlEquipos").val();
+        var txtNombreJugador = $("#ctl00_ctl00_PageContainer_PageContainer_txtNombreJugador").val();
+        var txtApellidoJugador = $("#ctl00_ctl00_PageContainer_PageContainer_txtApellidoJugador").val();
+        var txtEdadJugador = $("#ctl00_ctl00_PageContainer_PageContainer_txtEdadJugador").val();
+        var ddlEquipos = $("#ctl00_ctl00_PageContainer_PageContainer_ddlEquipos").val();
 
         var errorNombreJugador = $("#errorNombreJugador");
         var errorApellidoJugador = $("#errorApellidoJugador");

@@ -1,11 +1,10 @@
 ﻿$(document).ready(function () {
-    $("#PageContainer_PageContainer_btnEditar").click(function () {
+    $("#ctl00_ctl00_PageContainer_PageContainer_btnEditar").click(function () {
 
-        var txtIdJugador = $("#PageContainer_PageContainer_txtIdJugador").val();
+        var txtIdJugador = $("#ctl00_ctl00_PageContainer_PageContainer_txtIdJugador").val();
         var errorIdJugador = $("#errorIdJugador");
 
-
-        if (txtIdJugador == null || txtIdJugador.length == 0 || !/^\d+$/.test(txtIdJugador)) {
+        if (txtIdJugador == null || txtIdJugador.length == 0 || !/^\d{1,5}$/.test(txtIdJugador)) {
             errorIdJugador.css("display", "inline");
             return false;
         } else {
@@ -15,11 +14,10 @@
 
     $("#btnEliminarModal").click(function () {
 
-        var txtIdJugador = $("#PageContainer_PageContainer_txtIdJugador").val();
+        var txtIdJugador = $("#ctl00_ctl00_PageContainer_PageContainer_txtIdJugador").val();
         var errorIdJugador = $("#errorIdJugador");
 
-
-        if (txtIdJugador== null || txtIdJugador.length == 0 || !/^\d+$/.test(txtIdJugador)) {
+        if (txtIdJugador == null || txtIdJugador.length == 0 || !/^\d{1,5}$/.test(txtIdJugador)) {
             errorIdJugador.css("display", "inline");
             return false;
         } else {
