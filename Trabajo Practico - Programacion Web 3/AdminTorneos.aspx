@@ -20,7 +20,7 @@
                 <asp:ValidationSummary ID="VSAdminTorneos" runat="server" HeaderText="Errores en formulario:" />
 
                  <div class="form-group">
-                    <asp:Label ID="lblExitoso" runat="server" Text="Cambios realizados con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>
+                    <asp:Label ID="lblExitoso" runat="server" Text="Eliminado con éxito" class="success text-success" Visible="false" EnableViewState="false"></asp:Label>
                 </div>
 
                 <asp:Button ID="btnEditar" runat="server" Text="Editar" CssClass="btn btn-default" OnClick="btnEditar_Click" />

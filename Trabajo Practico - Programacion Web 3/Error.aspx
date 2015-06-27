@@ -7,7 +7,7 @@
     <div class="contenido">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <p>Hubo un error. <a href="Default.aspx">Ir al inicio</a></p>
+                <p>Hubo un error: el ID que ingresó no existe. <a href="Default.aspx">Ir al inicio</a></p>
             </div>
         </div>
         <!-- /.row -->

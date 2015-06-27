@@ -5,7 +5,7 @@
         var errorNombreTorneo = $("#errorNombreTorneo");
 
 
-        if (txtNombreTorneo == null || txtNombreTorneo.length == 0 || !/^([A-Z]|[a-z]|\s)+$/.test(txtNombreTorneo)) {
+        if (txtNombreTorneo == null || txtNombreTorneo.length == 0 || !/^([A-Z]|[a-z]|[0-9]|\s)+$/.test(txtNombreTorneo)) {
             errorNombreTorneo.css("display", "inline");
             return false;
         } else {

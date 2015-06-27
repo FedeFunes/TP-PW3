@@ -38,7 +38,11 @@ namespace Trabajo_Practico___Programacion_Web_3
                 j.IdEquipo = int.Parse(ddlEquipos.SelectedValue);
                 contexto.Jugador.Add(j);
                 contexto.SaveChanges();
-                Response.Redirect("AJugadores.aspx");                
+                lblOk.Visible = true;
+                lblOk.Text = "El jugador '" + j.Nombre + " " + j.Apellido + "'" + " fue creado con éxito";
+                txtNombreJugador.Text = string.Empty;
+                txtApellidoJugador.Text = string.Empty;
+                txtEdadJugador.Text = string.Empty;
             }
         }
     }

@@ -43,7 +43,11 @@ namespace Trabajo_Practico___Programacion_Web_3
                 if (ddlTorneos.SelectedValue != "0") { eq.IdTorneo = int.Parse(ddlTorneos.SelectedValue); }
                 contexto.Equipo.Add(eq);
                 contexto.SaveChanges();
-                Response.Redirect("AEquipos.aspx");                
+                lblOk.Visible = true;
+                lblOk.Text = "El equipo '" + eq.Nombre + "'" + " fue creado con éxito";
+                txtNombreEquipo.Text = string.Empty;
+                txtMontoAbonado.Text = string.Empty;
+                ddlTorneos.SelectedValue = "0";        
             }
 
         }

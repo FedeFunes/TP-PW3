@@ -11,7 +11,7 @@
         var errorMontoAbonado = $("#errorMontoAbonado");
  
 
-        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !/^([A-Z]|[a-z]|\s)+$/.test(txtNombreEquipo)) {
+        if (txtNombreEquipo == null || txtNombreEquipo.length == 0 || !/^([A-Z]|[a-z]|[0-9]|\s)+$/.test(txtNombreEquipo)) {
             errorNombreEquipo.css("display", "inline");
             return false;
         } else {
@@ -25,7 +25,7 @@
             errorDdlTorneos.css("display", "none");
         }
 
-        if (txtMontoAbonado == null || txtMontoAbonado.length == 0 || !/^\d+$/.test(txtMontoAbonado)) {
+        if (txtMontoAbonado == null || txtMontoAbonado.length == 0 || txtMontoAbonado.length > 4 || !/^\d+$/.test(txtMontoAbonado)) {
             errorMontoAbonado.css("display", "inline");
             return false;
         } else {

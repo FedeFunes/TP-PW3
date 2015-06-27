@@ -39,6 +39,10 @@
                 </div>
 
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Errores en formulario:" />
+
+                <div class="form-group">
+                    <asp:Label ID="lblOk" runat="server" Text="" Visible="false" CssClass="success text-success"></asp:Label>
+                </div>
                 
                 <asp:Button ID="btnCrearJugador" runat="server" Text="Crear Jugador" CssClass="btn btn-default" OnClick="btnCrearJugador_Click" />     
             </div>

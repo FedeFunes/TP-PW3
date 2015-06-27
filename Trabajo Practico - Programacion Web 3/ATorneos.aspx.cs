@@ -11,7 +11,7 @@ namespace Trabajo_Practico___Programacion_Web_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblOk.Visible = false;
         }
 
         protected void btnCrearTorneo_Click(object sender, EventArgs e)
@@ -23,8 +23,11 @@ namespace Trabajo_Practico___Programacion_Web_3
                 t.Nombre = txtNombreTorneo.Text;
                 t.Activo = cbActivoTorneo.Checked;
                 contexto.Torneo.Add(t);
-                contexto.SaveChanges();    
-                Response.Redirect("ATorneos.aspx");            
+                contexto.SaveChanges();
+                lblOk.Visible = true;
+                lblOk.Text = "El torneo '" + t.Nombre + "'" + " fue creado con éxito";
+                txtNombreTorneo.Text = string.Empty;
+                cbActivoTorneo.Checked = true;
             }
 
         }

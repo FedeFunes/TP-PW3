@@ -13,7 +13,7 @@ namespace Trabajo_Practico___Programacion_Web_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblExitoso.Visible = false;
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
